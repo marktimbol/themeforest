@@ -31,8 +31,7 @@ class GuestUserCanAddAnItemOnTheCartTest extends DuskTestCase
                 ->press('Add to Cart');
                 // ->assertSee('Item added to your cart.');
 
-            // We'll make sure that the item exists
-            // on the cart page.
+            // We'll make sure that the item exists on the cart page.
             $browser->visit('/cart')
                 ->assertSee('1 Item')
                 ->assertSee('The Product Name');
