@@ -21,6 +21,10 @@
                     @endforeach
                 </tbody>
             </table>
+
+            <p>
+                <a href="/checkout" class="btn btn-success">Checkout</a>
+            </p>
         </div>
     </div>
 </div>

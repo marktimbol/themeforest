@@ -12,6 +12,7 @@
 */
 
 Route::get('cart', 'CartController@index');
+Route::get('checkout', 'CheckoutController@index');
 
 Route::resource('items', 'ItemsController', [
 	'only'	=> ['show', 'store']
