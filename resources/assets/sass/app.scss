@@ -7,3 +7,10 @@
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+span.required {
+    color: #df2c2c;	
+	border-bottom: none;
+    text-decoration: underline;
+    font-family: Arial;
+}
