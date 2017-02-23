@@ -10,4 +10,9 @@ class CheckoutController extends Controller
     {
     	return view('public.billing.checkout');
     }
+
+    public function store(Request $request)
+    {
+    	dd($request->all());
+    }
 }

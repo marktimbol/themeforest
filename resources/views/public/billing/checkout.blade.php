@@ -13,6 +13,7 @@
 	            </p>
 
 	            <form method="POST" id="payment-form">
+	            	{{ csrf_field() }}
 	            	<div class="row">
 	            		<div class="col-md-6">
 	            			<div class="form-group">
@@ -76,7 +77,7 @@
 
             		<div class="form-group">
             			<button class="btn btn-lg btn-primary">Submit Payment</button>
-            		</div>     			            			            		
+            		</div>
 	            </form>
 	        </div>
 
