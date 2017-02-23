@@ -38,6 +38,6 @@ class ShoppingCart
 
 	public function totalInDollars()
 	{
-		return $this->total / 100;
+		return $this->total() / 100;
 	}
 }
