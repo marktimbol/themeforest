@@ -12,4 +12,9 @@ class Item extends Model
     {
     	return 'slug';
     }
+
+    public function url()
+    {
+    	return route('items.show', $this->slug);
+    }
 }

@@ -14,3 +14,15 @@ span.required {
     text-decoration: underline;
     font-family: Arial;
 }
+
+.Flex {
+	display: flex;
+}
+
+.Summary {
+	display: flex;
+}
+
+.Summary__info {
+	flex: 1;
+}

@@ -20,4 +20,24 @@ class ShoppingCart
 	{
 		return Cart::content();
 	}
+
+	public function subtotal()
+	{
+		return Cart::subtotal();
+	}
+
+	public function tax()
+	{
+		return Cart::tax();
+	}
+	
+	public function total()
+	{
+		return Cart::total();
+	}
+
+	public function totalInDollars()
+	{
+		return $this->total / 100;
+	}
 }

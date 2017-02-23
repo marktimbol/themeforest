@@ -9,7 +9,7 @@
 	        <div class="col-md-8">
 	            <h3>Billing Details</h3>
 	            <p class="lead">
-					We do not sell your details or share them without your permission. Read more in our privacy policy.
+					We do not sell your details or share them without your permission. Read more in our <a href="/privacy-policy">privacy policy</a>.
 	            </p>
 
 	            <form method="POST" id="payment-form">
@@ -83,8 +83,42 @@
 
 	        <div class="col-md-4">
 	            <h3>Order Summary</h3>
-	            <p>3D Design</p>
+	            <ul class="list-group">
+	            	@foreach( $items as $item )
+	            	<li class="list-group-item Summary">
+	            		<div class="Summary__info">
+		            		{{ $item->name }}
+		            		<p>{{ $item->qty }} &times; ${{ $item->price }}</p>
+	            		</div>
+	            		<div class="Summary__subtotal">
+	            			<p>${{ $item->subtotal() }}</p>
+	            		</div>
+	            	</li>
+	            	@endforeach
+	            </ul>
 
+	            <ul class="list-group">
+	            	<li class="list-group-item Summary">
+	            		<p class="Summary__info">
+		            		Subtotal
+	            		</p>
+	            		<p><strong>$ {{ $subtotal }}</strong></p>
+	            	</li>
+	            	<li class="list-group-item Summary">
+	            		<p class="Summary__info">
+		            		Tax
+	            		</p>
+	            		<p><strong>$ {{ $tax }}</strong></p>	            	
+	            	</li>	
+	            </ul>
+	            <ul class="list-group">            	
+	            	<li class="list-group-item Summary">
+	            		<p class="Summary__info">
+		            		Total
+	            		</p>
+	            		<p><strong>$ {{ $total }}</strong></p>	 	            	
+	            	</li>
+	            </ul>
 	        </div>
 	    </div>
 	</div>

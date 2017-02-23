@@ -1,24 +1,53 @@
 @extends('layouts.app')
 
+@section('pageTitle', 'Cart')
+
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             {{ $cart_count }} Item
 
-            <table class="table">
+            <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Name</th>
+                        <th>Item</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Subtotal</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach( $cart_items as $item )
                     <tr>
-                        <td>{{ $item->name }}</td>
-                        <td>{{ $item->price }}</td>
+                        <td>
+                            <a href="#">
+                                {{ $item->name }}
+                            </a>
+                        </td>
+                        <td>{{ $item->qty }}</td>
+                        <td>$ {{ $item->price }}</td>
+                        <td>$ {{ $item->subtotal() }}</td>
                     </tr>
                     @endforeach
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                            <td>Subtotal</td>
+                            <td>$ {{ $subtotal }}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                            <td>Tax</td>
+                            <td>$ {{ $tax }}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">&nbsp;</td>
+                            <td>Total</td>
+                            <td>$ {{ $total }}</td>
+                        </tr>
+                    </tfoot>
                 </tbody>
             </table>
 

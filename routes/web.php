@@ -11,7 +11,14 @@
 |
 */
 
+Route::post(
+    'stripe/webhook',
+    '\Laravel\Cashier\Http\Controllers\WebhookController@handleWebhook'
+);
+
+Route::get('/', 'PagesController@index');
 Route::get('cart', 'CartController@index');
+Route::post('cart', 'CartController@store');
 Route::get('checkout', 'CheckoutController@index');
 Route::post('checkout', 'CheckoutController@store');
 

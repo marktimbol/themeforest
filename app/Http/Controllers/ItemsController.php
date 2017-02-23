@@ -20,16 +20,4 @@ class ItemsController extends Controller
     {
     	return view('public.items.show', compact('item'));
     }
-
-    public function store(Request $request)
-    {
-    	$item = Item::findOrFail($request->id);
-    	$this->cart->add($item->id, $item->name, 1, $item->price);
-
-    	return 'Item added to your cart.';
-
-    	// return redirect()->back()->with([
-    	// 	'message'	=> 'Item added to your cart.'
-    	// ]);
-    }
 }
