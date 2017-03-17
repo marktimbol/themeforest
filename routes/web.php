@@ -16,16 +16,15 @@ Route::post(
     '\Laravel\Cashier\Http\Controllers\WebhookController@handleWebhook'
 );
 
+Auth::routes();
+Route::get('/home', 'HomeController@index');
+
 Route::get('/', 'PagesController@index');
+Route::resource('items', 'ItemsController', [
+	'only'	=> ['index', 'show']
+]);
+
 Route::get('cart', 'CartController@index');
 Route::post('cart', 'CartController@store');
 Route::get('checkout', 'CheckoutController@index');
 Route::post('checkout', 'CheckoutController@store');
-
-Route::resource('items', 'ItemsController', [
-	'only'	=> ['show', 'store']
-]);
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');

@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Billable, Notifiable;
+    use Billable, Notifiable, Uuids;
 
     /**
      * The attributes that are mass assignable.
@@ -29,4 +29,9 @@ class User extends Authenticatable
     ];
 
     public $incrementing = false;
+
+    public function items()
+    {
+        return $this->hasMany(Item::class);
+    }
 }

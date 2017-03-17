@@ -1,0 +1,21 @@
+.Hero {
+	min-height: 200px;
+	margin-bottom: 20px;
+	background: linear-gradient(0deg, hsla(0,0%,96%,.92), hsla(0,0%,96%,.92)), url('/images/Hero__bg.svg') repeat-x;
+}
+
+.Hero__title {
+	font-weight: 300;
+	margin: 0 0 10px 0;
+}
+
+.Hero__content {
+	width: 95%;
+	padding: 0 30px;
+}
+
+.Hero__description {
+    opacity: .6;
+	color: #505050;
+    font-size: 16px;
+}

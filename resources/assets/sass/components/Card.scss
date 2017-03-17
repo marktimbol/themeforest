@@ -1,0 +1,42 @@
+.Card {
+	margin-bottom: 30px;
+	box-shadow: 0px 2px 3px #ddd;
+}
+
+.Card__content {
+    display: flex;
+    background: white;
+    padding: 10px 15px;
+    align-items: center;
+    justify-content: space-between;	
+}
+
+.Card__title {
+	max-width: 95%;
+    font-size: 14px;
+    color: #303030;
+    line-height: 20px;
+
+    font-weight: 700;
+    margin: 0 0 3px;
+
+    // white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.Card__author {
+	color: #959597;
+	font-size: 12px;
+}
+
+.Card__content--download {
+	button {
+		padding: 0;
+	}
+
+	i {
+		color: #f93d66;
+		font-size: 18px;
+	}
+}

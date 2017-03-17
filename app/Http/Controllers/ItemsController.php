@@ -16,6 +16,13 @@ class ItemsController extends Controller
 		$this->cart = $cart;
 	}
 
+	public function index()
+	{
+		$items = Item::latest()->get();
+
+		return view('public.items.index', compact('items'));
+	}
+
     public function show(Item $item)
     {
     	return view('public.items.show', compact('item'));

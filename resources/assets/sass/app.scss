@@ -8,6 +8,21 @@
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+// Bulma
+// @import "node_modules/bulma/bulma";
+
+
+body {
+	font-size: 16px;
+	background: #fafafa;
+}
+
+.center-content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 span.required {
     color: #df2c2c;	
 	border-bottom: none;
@@ -26,3 +41,7 @@ span.required {
 .Summary__info {
 	flex: 1;
 }
+
+@import 'components/Hero';
+@import 'components/Card';
+@import 'components/Overwrite';

@@ -6,8 +6,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            {{ $cart_count }} Item
-
+            @if( $cart_items->count() > 0 )
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -54,6 +53,10 @@
             <p>
                 <a href="/checkout" class="btn btn-success">Checkout</a>
             </p>
+
+            @else
+                <p class="lead">Your cart is empty. <a href="/items">Browse items</a></p>
+            @endif
         </div>
     </div>
 </div>
